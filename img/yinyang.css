@@ -1,0 +1,35 @@
+
+p {
+	width: 96px;
+	height: 48px;
+	background: #eee;
+    border: 0px solid ;
+	border-width: 2px 2px 50px 2px;
+	border-radius: 50%;
+	position: relative;
+    margin:0 auto;
+} 
+
+p:before {
+	content: "";
+	position: absolute;
+	top:50%;
+	left: 0px;
+	background: #eee;
+	border: 18px solid black;
+	border-radius: 100%;
+	width: 12px;
+	height: 12px;
+}
+
+p:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: black;
+	border: 18px solid #eee;
+	border-radius:100%;
+	width: 12px;
+	height: 12px;
+}
