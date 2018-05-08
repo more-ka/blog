@@ -1,5 +1,5 @@
 body {
-    background: #efefef;
+    background: #EFEFEF;
     margin: 0;
   }
   a {
@@ -7,7 +7,13 @@ body {
     text-decoration: none;
   }
   *{
-    margin: 0;padding: 0;
+    margin: 0;padding: 0; /*去掉自带样式*/ 
+  }
+  ul,ol{
+    list-style: none;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
   }
   hr{
     height: 0;
@@ -73,9 +79,9 @@ body {
   }
   .banner{
     height: 515px;
-    background-image: url(./img/rs.jpg);
-    background-position: center center;
-    background-size: cover;
+    background-image: url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+    background-position: center center;  /*图片居中*/
+    background-size: cover; /*按比例缩放*/
   }
   .banner .mask{
     height:515px;
@@ -86,18 +92,25 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.53);
   }
 
   .userCard .welcome{
     background: #E6686A;
     color: white;
     display: inline-block;
-    padding: 4px 16px;
+    padding: 4px 16px;/*方法二：无论hello怎么变化，会自动加长或减短*/
     line-height: 22px;
     position: relative;
-  }
+    /*  方法一
+    width:70px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center ;水平居中 */  
+}
+  
   .userCard .welcome .triangle{
-    display: block;
+    display: block;/*把span变成div*/
     border: 10px solid transparent;
     width: 0px;
     border-left-color:  #E6686A;
@@ -131,7 +144,7 @@ body {
   }
   .userCard dl dt{
     width: 30%;
-    font-weight: bold;
+    font-weight: bold;/*加粗*/
   }
   .userCard dl dd{
     width: 70%;
@@ -146,8 +159,8 @@ body {
     width: 40px;
     line-height: 30px;
     padding: 5px 0;
-    border-radius: 50%;
-    margin: 16px;
+    border-radius: 50%;/*变圆形*/
+    margin: 16px;/*上下左右都是*/
   }
   .userCard > footer.media > a:hover{
     background:rgb(133, 77, 77);
@@ -156,6 +169,141 @@ body {
     width: 30px;
     height: 30px;
     fill: white;
-    vertical-align: top; 
+    vertical-align: top; /*写了之后上和下对称，不然上面与下面距离不一样*/
   }
-  
+  body main{
+    margin-top: -350px
+  }
+  body main p .button{
+    border: 1px solid #CBCDCF;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border-radius: 3px;
+    color: #464D59;
+    font-weight: bold;
+    margin-top: 45px;
+    transition: box-shadow 0.1s;
+  }
+  body main p{
+    text-align: center;
+  }
+  body main .button:hover{
+    box-shadow: 0px 3px 11px -1px rgba(0,0,0,0.2);
+  }
+  .selfIntroduction{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+  section.skills,
+  section.portfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+  }
+  section.skills > h2,
+  section.portfolio > h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  section.skills > h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+
+  }
+
+  section.skills > ol{
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.53);
+    padding: 42px 50px 10px;
+    margin-top: 40px; 
+  }
+  section.skills > ol  > li{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+  }  /* 所有元素左浮*/
+  section.skills > ol  > li:nth-child(even){
+    float: right;
+  }  /* 偶数元素右浮*/
+  section.skills .progressBar{
+    height: 5px;
+   
+    background: #FAE1E1;
+    margin: 4px 0 40px;
+  }
+  section.skills .progressBar .progress{
+    height: 100%;
+    background: red;
+    width: 70%;
+    border-radius: 5px;
+    
+  }
+  section.portfolio{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  section.portfolio nav{/*内联元素ol居中*/
+    text-align: center;
+  }
+  section.portfolio nav ol{
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;  /*d:ib之后加这个解决空隙bug*/
+    margin-top: 40px;
+  }
+  section.portfolio > nav >ol > li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  section.portfolio > nav > ol > li:nth-child(1){
+    margin-left: 0px;
+  }
+  section.portfolio > nav{
+    display: inline-block;
+    vertical-align: top; /*d:ib之后加这个解决空隙bug*/
+  }
+  section.portfolio > nav .bar{
+    height: 5px;
+    background:#FFFFFF;
+    margin-top: 5px;
+    margin-bottom: 31px;
+  }
+  section.portfolio > nav .bar .bar-inner{
+    height: 100%;
+    background: #FC3C43;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  section.portfolio > nav .bar.state-1 .bar-inner{
+    margin-left: 0;
+    width: 50px;
+  }
+  section.portfolio > nav .bar.state-2 .bar-inner{
+    margin-left: 70px;
+    width: 50px;
+  }
+  section.portfolio > nav .bar.state-3 .bar-inner{
+    margin-left: 145px;
+    width: 93px;
+  }
+  section.portfolio .works{
+    position: relative;
+  }
+  section.portfolio .works > .big,
+  section.portfolio .works > .small{
+    position: absolute;
+  }
+  section.portfolio .works > .big{
+    
+  }
