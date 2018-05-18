@@ -1,0 +1,165 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+*{
+    margin: 0;padding: 0; /*去掉自带样式*/ 
+}
+  ul,ol{
+    list-style: none;
+}
+  h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+  hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid rgb(219, 211, 211);
+}
+body span.left{
+    background: rgb(82, 199, 191);
+    width: 17%;
+    height: 1080px;
+    float: left;
+}
+body span.right{
+    background: white;
+    width: 80%;
+    height: 1080px;
+    float: right;
+}
+body span .picture{
+    margin: 10% 10% 0 10%;
+}
+body span .picture img{
+    margin-top: 29px;
+    margin-bottom: 25px;
+}
+body span.card{
+    margin: 3px;
+}
+span .userCard{
+    margin-top: 20px
+}
+.userCard{
+    margin: 0 0 0 10px;
+}
+.userCard dt,
+.userCard dd{
+    float: left;
+    margin-top: 10px;
+}
+.userCard dt{
+    font-weight: bold;/*加粗*/
+    width: 30%;
+
+}
+.userCard dd{
+    color: #3f3d3d;
+    width: 68%;
+}
+body span img{
+    margin: 10px auto;
+}
+div h1,p{
+    margin-top: 10px;
+}
+.skills,
+.portfolio{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.skills > h2,
+.portfolio > h2{
+  text-align: center;
+  color: #3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 15px;
+}
+.skills > h3{
+  font-size: 14px;
+  line-height: 1.1;
+  padding-right: 40px;
+  margin-bottom: 5px;
+}
+
+.skills > ol{
+  background: white;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.53);
+  padding: 42px 50px 10px;
+  margin-top: 40px; 
+}
+.skills > ol  > li{
+  float: left;
+  width: 10%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}  /* 所有元素左浮*/
+
+.skills .progressBar{ 
+  margin-top: 5px;
+  height: 4px;
+  margin-bottom: 15px;
+  background: #FAE1E1;
+  vertical-align: top;  /*d:ib之后加这个解决空隙bug*/
+}
+.skills .progressBar .progress{
+  height: 100%;
+  background: red;
+  width: 70%;
+  border-radius: 5px;
+}
+section{
+    margin: 10px;
+}
+section p.like{
+    margin: 30px;
+}
+p div{
+    margin-top: 30px;
+}
+section p div{
+    margin-top: 30px;
+    margin: 40px 40px 40px 40px;
+    float: left;
+    
+
+}
+a svg{
+    font-size: 8px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+    block-size:40px;
+    inline-size:40px;
+}
+div.works{
+    position: relative;
+  }
+div .big,
+div .small{
+    position: absolute;
+  }
+div.small{
+    float: left;
+  }
+span p div.works{
+      
+  }
+.right p h2{
+    margin-bottom: 60px;
+}
+h4{
+    margin-top: 10px;
+}
+h4 p{
+    margin-left: 30px;
+}
+hr{
+    height: 3px;
+}
