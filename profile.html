@@ -4,6 +4,8 @@
 <head>
   <title>个人简历</title>
   <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
   <style type="text/css">
     .loading{ width: 200px; height: 200px; position: relative; }
@@ -192,41 +194,30 @@
   </section>
   <section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
-    <nav>
-      <ol class="clearfix">
-        <li id="portfolio1">所有</li>
-        <li id="portfolio2">框架</li>
-        <li id="portfolio3">原生JS&amp;CSS</li>
-      </ol>
-      <div id="portfolioBar" class="bar state-1">
-        <div class="bar-inner"></div>
-      </div>
-    </nav>
-    <script>
-      portfolio1.onclick= function(){
-        portfolioBar.className = 'bar state-1'
-      }
-      portfolio2.onclick= function(){
-        portfolioBar.className = 'bar state-2'
-      }
-      portfolio3.onclick= function(){
-        portfolioBar.className = 'bar state-3'
-      }
-    </script>
 
 
-    <div class="works" style="height: 597px;">
-      <div class="big" style="top: 0; left: 0;">
-        <img src="./img/img1.jpg" alt="作品1">
+<style>
+      .swiper-container {
+    width: 600px;
+    height: 300px;
+    background: white;
+}  
+      </style>
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <img src="./img/nav.jpg" class="swiper-slide"> 
+              <img src="./img/canvas.jpg" class="swiper-slide">
+              <img src="./img/slide.jpg" class="swiper-slide">
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+          
+          <!-- 如果需要导航按钮 -->
+        
       </div>
-      <div class="small" style="top: 0; left: 645px;">
-        <img src="./img/img2.jpg" alt="作品2">
-      </div>
-      <div class="small" style="top: 299px; left: 645px;">
-        <img src="./img/img3.jpg" alt="作品3">
-      </div>
-    </div>
-
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
   </section>
   <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
   <script>
@@ -305,6 +296,28 @@ for(let i=0; i<aTags.length; i++){
     }
 }
   </script>
+  <script>        
+      var mySwiper = new Swiper ('.swiper-container', {
+        
+        loop: true,
+        
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })        
+      </script>
 </body>
 
 </html>

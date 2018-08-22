@@ -322,33 +322,3 @@ body {
     margin-top: 5px;
     margin-bottom: 31px;
   }
-  section.portfolio > nav .bar .bar-inner{
-    height: 100%;
-    background: #FC3C43;
-    border-radius: 5px;
-    transition: all 0.3s;
-  }
-  section.portfolio > nav .bar.state-1 .bar-inner{
-    margin-left: 0;
-    width: 50px;
-  }
-  section.portfolio > nav .bar.state-2 .bar-inner{
-    margin-left: 70px;
-    width: 50px;
-  }
-  section.portfolio > nav .bar.state-3 .bar-inner{
-    margin-left: 145px;
-    width: 93px;
-  }
-  section.portfolio .works{
-    position: relative;
-  }
-  section.portfolio .works > .big,
-  section.portfolio .works > .small{
-    position: absolute;
-  }
-  section.portfolio .works > .big{
-    width: 620;height: 600;
-    display: block;
-  }
-  
