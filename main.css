@@ -20,6 +20,13 @@ body {
     border: none;
     border-top: 1px solid #DEDEDE;
   }
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
   .clearfix::after {
     content: '';
     display: block;
@@ -252,6 +259,10 @@ body {
     line-height: 1.2;
     font-weight: 600;
   }
+  section.portfolio{max-width: 720px;}
+
+  section.portfolio > h2{margin-bottom: 42px;}
+
   section.skills > h3{
     font-size: 14px;
     line-height: 1.1;
@@ -322,3 +333,10 @@ body {
     margin-top: 5px;
     margin-bottom: 31px;
   }
+  .swiper-container {
+    width: 600px;
+    height: 300px;
+    background: white;}
+    
+.swiper-button-prev,
+.swiper-button-next{top:60%;right: 0;}
