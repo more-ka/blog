@@ -41,6 +41,8 @@ myFrom.addEventListener('submit', function (e) {
                 li.innerText = `${object.attributes.name}:${object.attributes.content}`
                 let messageLIst = document.querySelector('#messageList')
                 messageLIst.appendChild(li)
+        myForm.querySelector('input[name=name]').value = ''
+                myForm.querySelector('input[name=content]').value = ''
         console.log(object)
     })
 })
