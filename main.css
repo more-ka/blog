@@ -252,6 +252,7 @@ body {
     margin-top: 60px;
   }
   section.skills > h2,
+  section.message > h2,
   section.portfolio > h2{
     text-align: center;
     color: #3d4451;
@@ -340,3 +341,17 @@ body {
     
 .swiper-button-prev,
 .swiper-button-next{top:60%;right: 0;}
+
+section.message{
+  width:700px;
+  margin:0 auto;
+  padding-bottom: 50px;
+}
+section.message > ol{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+section.message > ol > li{
+  padding:16px;
+  border-bottom:1px solid #E8676B;
+}
