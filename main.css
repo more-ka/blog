@@ -124,7 +124,7 @@ body {
   }
   .banner{
     height: 515px;
-    background-image: url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+    background-image: url(./img/bg.jpg);
     background-position: center center;  /*图片居中*/
     background-size: cover; /*按比例缩放*/
   }
