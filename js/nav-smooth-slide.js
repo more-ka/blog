@@ -1,6 +1,5 @@
 ! function () {
     var view = document.querySelector('nav.menu')
-
     var controller = {
         view: null,
         aTags: null,
@@ -19,14 +18,14 @@
         scrollToElemenet: function (element) {
             let top = element.offsetTop
             let currentTop = window.scrollY
-            let targetTop = top - 80
+            let targetTop = top - 100
             let s = targetTop - currentTop // 路程
             var coords = {
                 y: currentTop
             }; // 起始位置
-            var t = Math.abs((s / 100) * 300) // 时间
+            var t = Math.abs((s / 100) * 200) // 时间
             if (t > 500) {
-                t = 500
+                t = 700
             }
             var tween = new TWEEN.Tween(coords) // 起始位置
                 .to({
@@ -40,7 +39,7 @@
                 .start(); // 开始缓动
         },
         bindEvents: function () {
-            let aTags = this.view.querySelectorAll('nav.menu > ul > li > a')
+            let aTags = this.view.querySelectorAll('nav.menu > ul > li > a.link')
             for (let i = 0; i < aTags.length; i++) {
                 aTags[i].onclick = (x)=> {
                     x.preventDefault()

@@ -1,357 +1,471 @@
 body {
-    background: #EFEFEF;
-    margin: 0;
+  background: #0E141F;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /*去掉自带样式*/
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #DEDEDE;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+[data-x].offset {
+  transform: translateY(150px);
+}
+
+[data-x] {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-30px);
   }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  *{
-    margin: 0;padding: 0; /*去掉自带样式*/ 
-  }
-  ul,ol{
-    list-style: none;
-  }
-  h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-  }
-  hr{
-    height: 0;
-    border: none;
-    border-top: 1px solid #DEDEDE;
-  }
-  .icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-  }
-  .clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  [data-x].offset{
-    transform: translateY(150px);
-  }
-  [data-x]{
+
+  100% {
     transform: translateY(0);
-    transition: all 0.5s;
   }
-  @keyframes slideUp{
-    0%{
-      transform: translateY(-30px);
-    }
-    100%{
-      transform: translateY(0);
-    }
+}
+
+.topNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  color: #FFFFFF;
+}
+
+.topNavBar.sticky {
+  background: #0e141f;
+  z-index: 1;
+  color: #3D4451;
+  box-shadow: 0 10px 50px -5px #000;
+}
+
+/*z-index:显示层级优先级*/
+.topNavBar-inner {
+  padding: 0 40px;
+  transition: all .5s;
+}
+
+.topNavBar.sticky .topNavBar-inner {
+  padding: 10px 40px 10px;
+}
+
+.topNavBar nav {
+  padding-top: 3px;
+}
+
+.topNavBar nav>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  left: 200px;
+}
+
+.topNavBar nav>ul>li {
+  float: left;
+  margin-left: 17px;
+  margin-right: 17px;
+  position: relative;
+  color: #ffffff;
+}
+
+.topNavBar nav>ul>li>a {
+  font-size: 14px;
+  color: inherit;
+  font-weight: bold;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+  position: relative;
+}
+
+.topNavBar nav>ul>li:hover>a:after,
+.topNavBar nav>ul>li:active>a:after,
+.topNavBar nav>ul>li.highlight>a:after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffcb36;
+  height: 3px;
+  animation: menuSlide 0.3s;
+}
+
+@keyframes menuSlide {
+  0% {
+    width: 0
   }
 
-  .topNavBar {
-    padding: 20px 0px 20px 0px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: all 0.5s;
-    color:#BFC1C4;
+  100% {
+    width: 100%
   }
-  .topNavBar.sticky{background:white;z-index:1;padding: 10px 0;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);color:#3D4451;}/*z-index:显示层级优先级*/
-  .topNavBar-inner{
-    padding: 0 16px;
-  }
-  .topNavBar nav {
-    padding-top: 3px;
-  }
-  .topNavBar nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    left: 200px;
-  }
-  .topNavBar nav > ul > li {
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
-    position: relative;
-  }
-  .topNavBar nav > ul > li > a {
-    font-size: 12px;
-    color: inherit;
-    font-weight: bold;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: block;
-    position: relative;
-  }
-  .topNavBar nav > ul > li:active > a:after,
-  .topNavBar nav > ul > li.highlight > a:after {
-    position: absolute;
-    content: '';
-    display: block;
-    top:100%;
-    left:0;width:100%;
-    background: red;
-    height:3px;
-    animation: menuSlide 0.3s;
-  }
-  @keyframes menuSlide{
-    0%{width:0}
-    100%{width:100%}
-  }
-  .topNavBar .submenu{display: none;position: absolute;left: 0;top: 100%;background: white;box-shadow:0 0 5px rgba(0,0,0,0.53)}
-  .topNavBar li.active> .submenu{display: block;animation: submenuSlide 0.3s}  
-  @keyframes submenuSlide{
-    0%{margin-right:100%;}100%{margin-right:0%;}
-  }
-  .topNavBar .submenu > li{white-space: nowrap;padding: 5px 10px;}  /*禁止换行*/
-  .topNavBar .logo {
-    font-size: 24px;
-    font-family: 'Arial Black';
-    padding-top: 3px;
-    padding-bottom: 4px;
-  }
-  .topNavBar .logo .rs {
-    margin-right: 4px;
-    color:rgb(252, 60, 67);
-  }
-  .topNavBar .logo .card {
-    color: #9A9DA2;
-  }
-  .banner{
-    height: 515px;
-    background-image: url(./img/bg.jpg);
-    background-position: center center;  /*图片居中*/
-    background-size: cover; /*按比例缩放*/
-  }
-  .banner .mask{
-    height:515px;
-    background-color: rgba(0, 0, 0,0.7);
-  }
-  .userCard{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
-    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.53);
+}
+
+.topNavBar .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.53)
+}
+
+.topNavBar li.active>.submenu {
+  display: block;
+  animation: submenuSlide 0.3s
+}
+
+@keyframes submenuSlide {
+  0% {
+    margin-right: 100%;
   }
 
-  .userCard .welcome{
-    background: #E6686A;
-    color: white;
-    display: inline-block;
-    padding: 4px 16px;/*方法二：无论hello怎么变化，会自动加长或减短*/
-    line-height: 22px;
-    position: relative;
-    /*  方法一
+  100% {
+    margin-right: 0%;
+  }
+}
+
+.topNavBar .submenu>li {
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+
+/*禁止换行*/
+.topNavBar .logo {
+  font-size: 24px;
+  font-family: 'Arial Black';
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+.topNavBar .logo .rs {
+  color: #ffcb36;
+}
+
+.topNavBar .logo .card {
+  color: #fff;
+}
+
+.banner {
+  height: 515px;
+  background-image: url(./img/bg.jpg);
+  background-position: center center;
+  /*图片居中*/
+  background-size: cover;
+  /*按比例缩放*/
+}
+
+.banner .mask {
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.userCard {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0e141f;
+  box-shadow: 0 10px 50px -5px #000;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
+.userCard .welcome {
+  background: #131d31;
+  color: white;
+  display: inline-block;
+  border: 1px solid #ffcb36;
+  padding: 8px 16px;
+  position: relative;
+  border-radius: 2px;
+  /*方法二：无论hello怎么变化，会自动加长或减短*/
+  line-height: 22px;
+  position: relative;
+  /*  方法一
     width:70px;
     height: 29px;
     line-height: 29px;
-    text-align: center ;水平居中 */  
+    text-align: center ;水平居中 */
 }
-  
-  .userCard .welcome .triangle{
-    display: block;/*把span变成div*/
-    border: 10px solid transparent;
-    width: 0px;
-    border-left-color:  #E6686A;
-    border-top-width: 0px;
-    position: absolute;
-    left: 4px;
-    top: 100%;
-  }
-  .userCard .picture{
-    float: left;
-    margin-right: 65px;
-  }
-  .userCard .text{
-    float: left;
-    width: 450px;
-  }
-  .userCard .text h1{
-    margin-top: 25px;
-    margin-bottom: 10px;
-  }
-  .userCard .text hr{
-    margin-top: 20px;
-  }
-  .userCard .pictureAndText{
-    padding: 50px;
-  }
-  .userCard dl dt,
-  .userCard dl dd{
-    float: left;
-    padding: 5px 0;
-  }
-  .userCard dl dt{
-    width: 30%;
-    font-weight: bold;/*加粗*/
-  }
-  .userCard dl dd{
-    width: 70%;
-    color: #9da0a7;
-  }
-  .userCard > footer.media{
-    background: #e8676b;
-    text-align: center;
-  }
-  .userCard > footer.media > a{
-    display: inline-block;
-    width: 40px;
-    line-height: 30px;
-    padding: 5px 0;
-    border-radius: 50%;/*变圆形*/
-    margin: 16px;/*上下左右都是*/
-  }
-  .userCard > footer.media > a:hover{
-    background:rgb(133, 77, 77);
-  }
-  .userCard svg{
-    width: 30px;
-    height: 30px;
-    fill: white;
-    vertical-align: top; /*写了之后上和下对称，不然上面与下面距离不一样*/
-  }
-  body main{
-    margin-top: -350px
-  }
-  body main p .downloadResume{
-    border: 1px solid #CBCDCF;
-    font-size: 15px;
-    line-height: 16px;
-    padding: 21px 55px;
-    display: inline-block;
-    border-radius: 3px;
-    color: #464D59;
-    font-weight: bold;
-    margin-top: 45px;
-    transition: box-shadow 0.1s;
-  }
-  body main p{
-    text-align: center;
-  }
-  body main .downloadResume:hover{
-    box-shadow: 0px 3px 11px -1px rgba(0,0,0,0.2);
-  }
-  .selfIntroduction{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 40px;
-  }
-  section.skills,
-  section.portfolio{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-  }
-  section.skills > h2,
-  section.message > h2,
-  section.portfolio > h2{
-    text-align: center;
-    color: #3d4451;
-    font-size: 34px;
-    line-height: 1.2;
-    font-weight: 600;
-  }
-  section.portfolio{max-width: 720px;}
 
-  section.portfolio > h2{margin-bottom: 42px;}
+.userCard .welcome .triangle {
+  display: block;
+  /*把span变成div*/
+  border: 10px solid transparent;
+  width: 0px;
+  border-left-color: #ffcb36;
+  border-top-width: 0px;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+}
 
-  section.skills > h3{
-    font-size: 14px;
-    line-height: 1.1;
-    padding-right: 40px;
+.userCard .picture {
+  float: left;
+  margin-right: 65px;
+}
 
-  }
+.userCard .text {
+  float: left;
+  width: 450px;
+}
 
-  section.skills > ol{
-    background: white;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.53);
-    padding: 42px 50px 10px;
-    margin-top: 40px; 
-  }
-  section.skills > ol  > li{
-    float: left;
-    width: 48%;
-    box-sizing: border-box;
-  }  /* 所有元素左浮*/
-  section.skills > ol  > li:nth-child(even){
-    float: right;
-  }  /* 偶数元素右浮*/
-  section.skills .progressBar{
-    height: 5px;
-   
-    background: #FAE1E1;
-    margin: 4px 0 40px;
-    overflow: hidden; 
-  }
-  section.skills .progressBar .progress{
-    height: 100%;
-    background: red;
-    width: 70%;
-    border-radius: 5px;
-    transform: translateX(0); 
-    transition: all 1s;
-  }
-  section.skills.offset .progress{
-    transform: translateX(-100%);
-  }
-  section.portfolio{
-    text-align: center;
-    margin-bottom: 100px;
-  }
-  section.portfolio nav{/*内联元素ol居中*/
-    text-align: center;
-  }
-  section.portfolio nav ol{
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: top;  /*d:ib之后加这个解决空隙bug*/
-    margin-top: 40px;
-  }
-  section.portfolio > nav >ol > li{
-    float: left;
-    margin-left: 40px;
-    cursor: pointer;
-  }
-  section.portfolio > nav > ol > li:nth-child(1){
-    margin-left: 0px;
-  }
-  section.portfolio > nav{
-    display: inline-block;
-    vertical-align: top; /*d:ib之后加这个解决空隙bug*/
-  }
-  section.portfolio > nav .bar{
-    height: 5px;
-    background:#FFFFFF;
-    margin-top: 5px;
-    margin-bottom: 31px;
-  }
-  .swiper-container {
-    width: 600px;
-    height: 300px;
-    background: white;}
-    
-.swiper-button-prev,
-.swiper-button-next{top:60%;right: 0;}
+.userCard .text h1 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #fff;
+}
 
-section.message{
-  width:700px;
-  margin:0 auto;
+.userCard .text p {
+  color: #a89e8a;
+}
+
+.userCard .text hr {
+  margin-top: 20px;
+}
+
+.userCard .pictureAndText {
+  padding: 50px;
+}
+
+.userCard dl dt,
+.userCard dl dd {
+  float: left;
+  padding: 5px 0;
+}
+
+.userCard dl dt {
+  width: 30%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.userCard dl dd {
+  width: 70%;
+  color: #a89e8a;
+}
+
+
+body main {
+  margin-top: -350px
+}
+
+body main p .downloadResume {
+  position: absolute;
+  top: 50px;
+  left: 56%;
+  border: 1px solid #ffcb36;
+  font-size: 12px;
+  padding: 10px 12px;
+  display: inline-block;
+  border-radius: 3px;
+  color: #ffcb36;
+  font-weight: bold;
+  transition: box-shadow 0.1s;
+}
+
+body main p {
+  text-align: center;
+}
+
+body main .downloadResume:hover {
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.2);
+}
+
+.selfIntroduction {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+section.skills,
+section.portfolio {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+section.skills>h2,
+section.message>h2,
+section.portfolio>h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.skills>.detail {
+  padding: 4px;
+}
+
+.skills p {
+  margin-left: 24px;
+  color: #a89e8a;
+}
+
+section.portfolio {
+  max-width: 1020px;
+}
+
+section.portfolio>h2 {
+  margin-bottom: 42px;
+}
+
+
+.works{
+  display: flex;
+}
+.works .imgs{
+  width: 400px;
+  padding: 0 0 0 70px;
+}
+.works .imgs img{
+  margin-bottom: 20px;
+  width: 300px;
+  height: 150px;
+  /* box-shadow: 1px 1px 3px #bdbdbd; */
+}
+.works .content{
+  width: 840px;
+  padding: 0 36px 0 24px;
+  color: #a89e8a;
+}
+.works .content .link h3{
+  display: inline-block;
+  width: 24vh;
+}
+.works .content .link a{
+  text-decoration: none;
+}
+.works .content .link a:hover{
+  text-decoration: underline;
+}
+.works .content .ui{
+  margin-top: -6px;
+  display: inline-block;
+}
+.works .content .youzan{
+  display: inline-block;
+  margin-top: 6px;
+}
+.works .content .fm{
+  display: inline-block;
+  margin-top: 44px;
+}
+.works .content .cnode{
+  display: inline-block;
+  margin-top: 88px;
+}
+.works .content .animation{
+  display: inline-block;
+  margin-top: 64px;
+}
+section.message {
+  width: 700px;
+  margin: 0 auto;
   padding-bottom: 50px;
 }
-section.message > ol{
-  padding-top:30px;
-  padding-bottom:30px;
+
+section.message>ol {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-section.message > ol > li{
-  padding:16px;
-  border-bottom:1px solid #E8676B;
+
+section.message>ol>li {
+  padding: 16px;
+  border-bottom: 1px solid #ffcb36;
+}
+
+section.message>ol>li>span:first-child {
+  color: #ffcb36;
+  font-weight: bold;
+  width: 80px;
+  display: inline-block;
+}
+
+section.message>ol>li>span {
+  color: #a89e8a;
+}
+form{
+  text-align: center;
+}
+.input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #ffcb36;
+  outline: none;
+  padding: 4px;
+  /* color: #a89e8a; */
+  /*输入文字、光标颜色*/
+  -webkit-text-fill-color: #a89e8a;
+  /*输入文字、placeholder颜色*/
+  caret-color: white;
+  /*光标颜色*/
+}
+
+.submit {
+  border: 1px solid #ffcb36;
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 3px;
+  background: #29303d;
+  margin-left: 40px;
+  color: #ffcb36;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #ffcb36;
+  font-weight: bold;
 }
