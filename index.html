@@ -3,7 +3,7 @@
 
 <head>
   <title>个人简历</title>
-
+  <script src="https://cdn.bootcss.com/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="./main.css">
 </head>
 
@@ -39,10 +39,8 @@
     <div class="mask"></div>
   </div>
   <main>
-    <div data-x id="siteAbout" class="userCard">
-      <div class="pictureAndText clearfix">
-        <div class="picture">
-        </div>
+    <div data-x id="siteAbout" class="userCard scrollReveal">
+      <div class="pictureAndText clearfix scrollReveal">
         <div class="text">
           <span class="welcome"><span class="highlight">应聘前端工程师</span>
             <span class="triangle"></span>
@@ -51,7 +49,7 @@
             <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
           </p>
           <h1>谢公谦</h1>
-          <a href="#">
+          <a href="https://github.com/more-ka" target="_blabk">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-github"></use>
             </svg>
@@ -61,47 +59,50 @@
           <dl>
             <dt>年龄</dt>
             <dd>18</dd>
-            <dt>所在城市</dt>
-            <dd>成都</dd>
+            <dt>QQ</dt>
+            <dd>1500407272</dd>
             <dt>邮箱</dt>
-            <dd>1454522369.com</dd>
+            <dd>1500407272@gmail.com</dd>
             <dt>手机</dt>
-            <dd>13812345678</dd>
+            <dd>18383244490</dd>
           </dl>
         </div>
+        <div class="picture">
+          <img src="./img/wechat.png" alt="">
+          </div>
       </div>
     </div>
 
   </main>
 
   <section data-x id="siteWorks" class="portfolio">
-    <h2>作品集</h2>
+    <h4>作品集</h4>
     <div class="works">
       <div class="imgs">
-        <img class="ui-img" src="./img/wheel.png">
-        <img class="youzan-img" src="./img/youzan.png">
-        <img class="fm-img" src="./img/fm.png">
-        <img class="cnode-img" src="./img/cnode.png">
-        <img class="animation-img" src="./img/3.png">
+        <img class="ui-img scrollReveal" src="./img/wheel.png">
+        <img class="youzan-img scrollReveal" src="./img/youzan.png">
+        <img class="fm-img scrollReveal" src="./img/fm.png">
+        <img class="cnode-img scrollReveal" src="./img/cnode.png">
+        <img class="animation-img scrollReveal" src="./img/3.png">
       </div>
       <div class="content">
-        <span class="ui">
+        <span class="ui scrollReveal">
           <div class="link">
             <h3>UI组件</h3>
             <a href="https://more-ka.github.io/vue-ui-wheel/"><span class="highlight">预览链接</span></a> /
             <a href="https://github.com/more-ka/vue-ui-wheel"><span class="highlight">源码链接</span></a>
           </div>
           <p>关键词： <span class="highlight">Vue.js/ VuePress/ ES6/ Parcel/ Npm/ Mocha/ SCSS/ TravisCI</span></p>
-          <p>项目介绍：该项目是参照 Framework7、Ant Design、Element UI 等 UI 库思路，
-            做的一个基于Vue.js的简易 <span class="highlight">UI 组件库</span>，
-            目前已支持 按钮 布局 输入框 Tabs Popover tabs标签 Toast 手风琴 等组件。
+          <p>项目介绍：该项目是参照 Framework7、Ant Design、Element UI 等 UI库思路，
+            做的一个基于Vue.js的简易 <span class="highlight">UI组件库</span>，
+            目前已支持 按钮 布局 输入框 Popover tabs标签 Toast 手风琴 等组件。
             每个组件均经历从 <span class="highlight">需求分析</span> 到 <span class="highlight">Mocha 单元测试</span>，
             并用 <span class="highlight">TravisCI 实现持续集成</span>，
             最终以VuePress 为基础制作 <span class="highlight">官方文档</span>，
             发布于 npmjs.org。 完成该项目使我对 Vue 的常用特征更加熟悉，
             同时提升了自己对 <span class="highlight">前端工程化流程以及单元测试重要性</span> 的理解</p>
         </span>
-        <span class="youzan">
+        <span class="youzan scrollReveal">
           <div class="link">
             <h3>有赞商城</h3>
             <a href="https://more-ka.github.io/youzan/dist/index.html"><span class="highlight">预览链接</span></a> /
@@ -115,7 +116,7 @@
               class="highlight">商品触底无线加载</span>， <span class="highlight">购物车商品管理</span>， 以及 <span
               class="highlight">地址的三级联动选择</span> 和增删改功能</p>
         </span>
-        <span class="fm">
+        <span class="fm scrollReveal">
           <div class="link">
             <h3>FM播放器</h3>
             <a href="https://more-ka.github.io/myFM/index.html"><span class="highlight">预览链接</span></a> /
@@ -126,7 +127,7 @@
             <span class="highlight">MVC思想封装</span>，
             网站支持 <span class="highlight">响应式</span> (不支持手机端)， 歌曲进度条点击， 歌词变色功能</p>
         </span>
-        <span class="cnode">
+        <span class="cnode scrollReveal">
           <div class="link">
             <h3>cnode社区</h3>
             <a href="https://more-ka.github.io/cnode/dist/index.html"><span class="highlight">预览链接</span></a> /
@@ -137,7 +138,7 @@
             <span class="highlight">Axios</span> 获取数据， 使用 <span class="highlight">Vue-Router</span> 进行前端路由的切换及传参， 使用
             <span class="highlight">watch</span> 监听路由的变化， <span class="highlight">Webpack 打包</span> </p>
         </span>
-        <span class="animation">
+        <span class="animation scrollReveal">
           <div class="link">
             <h3>滑稽</h3>
             <a href="https://more-ka.github.io/animation-comical/index.html"><span class="highlight">预览链接</span></a> /
@@ -152,62 +153,10 @@
     </div>
 
   </section>
-  <!-- <section data-x id="siteSkills" class="skills">
-    <h2>技能</h2>
-    <ol class="clearfix">
-      <li>
-        <h3>
-          HTML 5 &amp; CSS 3
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 10%;"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          JavaScript
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 20%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          jQuery
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 30%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          Vue.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 40%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          React.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 50%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          Node.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 60%"></div>
-        </div>
-      </li>
-    </ol>
-  </section> -->
-  <section data-x id="siteSkills" class="skills">
-    <h2>技能描述</h2>
-    <span class="detail" data-scroll-reveal>
+
+  <section data-x id="siteSkills" class="skills scrollReveal">
+    <h4>技能描述</h4>
+    <span class="detail">
       <p> 能独立制作精美网页，掌握 <span class="highlight">CSS3</span> 动画、过渡效果、熟练 HTML、DIV + CSS 的页面布局，能像素级还原设计图</p>
       <p>会使用 <span class="highlight">REM</span> 、<span class="highlight">vw/vh</span> 等技术制作适配手机设备的页面。</p>
       <p>熟悉 <span class="highlight">JavaScript</span> ，理解 <span class="highlight">原型链</span> 、 <span
@@ -219,8 +168,8 @@
       <p>了解 <span class="highlight">Node.js</span> ，能够开发简单的后台服务器</p>
       </div>
   </section>
-  <section class="message" data-x id="siteComment">
-    <h2>留言板</h2>
+  <section class="message scrollReveal" data-x id="siteComment">
+    <h4>留言板</h4>
     <ol id="messageList">
     </ol>
     <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
@@ -232,10 +181,22 @@
     </form>
   </section>
   <footer class="copyright">
-    <p>Open source: <a href="https://github.com/more-ka/resume"><span>GitHub</span></a> </p>
-    <p>© copyright Jiang, 2018-2019</p>
+    <p>Open source: <a href="https://github.com/more-ka/resume">GitHub</a> </p>
+    <p>© copyright more-ka, 2018-2019</p>
   </footer>
-
+  <script>
+    window.onload = function () {
+      ScrollReveal().reveal('.scrollReveal', {
+        reset: true,
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        distance: '50px',
+        scale: 0.8,
+        opcity: 0.7,
+        duration: 700
+      });
+    }
+  </script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>

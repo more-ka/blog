@@ -61,9 +61,9 @@
       let myForm = this.form;
       let name = myForm.querySelector("input[name=name]").value;
       let content = myForm.querySelector("input[name=content]").value;
-      if(name.length===0&&content.length===0){
-        alert('写点东西在提交吧')
-        return
+      if (name.length === 0 || content.length === 0) {
+        alert("写点东西在提交吧");
+        return;
       }
       this.model.save(name, content).then(function(object) {
         let messageList = document.querySelector("#messageList");
