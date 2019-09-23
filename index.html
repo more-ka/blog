@@ -5,10 +5,189 @@
   <title>个人简历</title>
   <script src="https://cdn.bootcss.com/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="./main.css">
+  <meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+  <style>
+    @media screen and (min-width:280px) and (max-width:450px) {
+
+      html,
+      body {
+        width: 100vw;
+      }
+
+      body main {
+        margin-top: -440px;
+      }
+
+      .topNavBar {
+        display: none;
+      }
+
+      .userCard .pictureAndText {
+        text-align: center;
+      }
+
+      .userCard .welcome {
+        margin-left: -44%;
+      }
+
+      .userCard .welcome .triangle {
+        border-right-color: #ffcb36;
+        border-left-color: transparent;
+        left: 116px;
+      }
+
+      .userCard .downloadResume {
+        left: 58%;
+        top: 10vw;
+      }
+
+      .userCard .pictureAndText {
+        padding: 10vw;
+      }
+
+      .userCard .text {
+        width: 100%;
+      }
+
+      .userCard .text p {
+        margin: 4% 0 0 0;
+      }
+
+      .userCard .text .github,
+      .userCard .text .blog {
+        position: inherit;
+        margin:0 4%;
+      }
+
+      .userCard dl {
+        text-align: left;
+      }
+
+      .userCard dl dt {
+        width: 21%;
+        font-size: 14px;
+      }
+
+      .userCard dl dd {
+        font-size: 14px;
+      }
+
+      .userCard .text hr {
+        /* border: none; */
+        margin: 4%;
+      }
+
+      .userCard .picture img {
+        margin: 6% auto 0;
+        float: inherit;
+        display: inline;
+      }
+
+      .works img {
+        width: 50%;
+        margin: 0 auto;
+        float: inherit;
+      }
+
+      .works .detail {
+        padding: 2% 0 0 0;
+        margin: 0 auto;
+        width: 100%;
+        float: inherit;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      section.skills>h4,
+      section.message>h4,
+      section.portfolio>h4 {
+        margin-bottom: 40px;
+      }
+
+      .works .content>span {
+        margin: 4% 4%;
+        background: #131d31;
+        padding: 2%;
+        box-shadow: 0px 0px 12px 0px #000;
+      }
+
+      .works .content .link h3 {
+        font-size: 14px;
+      }
+
+      .works .content .link a {
+        font-size: 14px;
+      }
+
+      section.message {
+        width: 92%;
+      }
+
+      section.skills {
+        padding: 4%;
+      }
+
+      section.skills>h4,
+      section.message>h4,
+      section.portfolio>h4 {
+        font-size: 16px;
+      }
+
+      section.message>ol>li {
+        padding: 6px;
+      }
+
+      section.message>ol>li>span:first-child {
+        display: block;
+        font-size: 14px;
+      }
+
+      section.message>ol>li>span {
+        display: block;
+        font-size: 14px;
+      }
+
+      form {
+        width: 100%;
+        text-align: start;
+        font-size: 14px;
+      }
+
+      form .name input {
+        width: 50%;
+      }
+      form .content input {
+        width: 80%;
+      }
+
+      form .content {
+        margin-top: 2%;
+        margin-bottom: 10%;
+        width:100%;
+      }
+
+      .submit {
+        padding: 4px 10px;
+        margin-left: 0;
+        display: block;
+      }
+
+      .edu {
+        margin-bottom: 20%;
+        text-align: center;
+      }
+
+      .copyright {
+        display: none;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
-
   <div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo" style="float: left;">
@@ -46,19 +225,24 @@
             <span class="triangle"></span>
           </span>
           <p class="downloadResume-wrapper">
-            <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+            <a class="downloadResume" href="./img/谢公谦-应聘前端开发工程师2019.pdf" target="_blank" download>下载 PDF 简历</a>
           </p>
           <h1>谢公谦</h1>
-          <a href="https://github.com/more-ka" target="_blabk">
+          <a class="github" href="https://github.com/more-ka" target="_blabk">
             <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-github"></use>
+              <use xlink:href="#icon-git"></use>
             </svg>
           </a>
-          <p>之前从事建筑相关工作， 自学前端半年</p>
+          <a class="blog" href="https://juejin.im/user/5adc9a1d518825671d2026c4" target="_black">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-boke"></use>
+            </svg>
+          </a>
+          <p>之前从事建筑相关工作, 自学前端半年. 对前端抱有热情, 最令人欣喜的地方是反复调试后, 终于得到精致的界面和流畅的动效. 狭小的窗口也可以有无限可能</p>
           <hr>
           <dl>
             <dt>年龄</dt>
-            <dd>18</dd>
+            <dd>23</dd>
             <dt>QQ</dt>
             <dd>1500407272</dd>
             <dt>邮箱</dt>
@@ -69,7 +253,7 @@
         </div>
         <div class="picture">
           <img src="./img/wechat.png" alt="">
-          </div>
+        </div>
       </div>
     </div>
 
@@ -78,76 +262,85 @@
   <section data-x id="siteWorks" class="portfolio">
     <h4>作品集</h4>
     <div class="works">
-      <div class="imgs">
-        <img class="ui-img scrollReveal" src="./img/wheel.png">
-        <img class="youzan-img scrollReveal" src="./img/youzan.png">
-        <img class="fm-img scrollReveal" src="./img/fm.png">
-        <img class="cnode-img scrollReveal" src="./img/cnode.png">
-        <img class="animation-img scrollReveal" src="./img/3.png">
-      </div>
       <div class="content">
-        <span class="ui scrollReveal">
-          <div class="link">
-            <h3>UI组件</h3>
-            <a href="https://more-ka.github.io/vue-ui-wheel/"><span class="highlight">预览链接</span></a> /
-            <a href="https://github.com/more-ka/vue-ui-wheel"><span class="highlight">源码链接</span></a>
+        <span class="ui scrollReveal clearfix">
+          <img class="ui-img" src="./img/wheel.png">
+          <div class="detail">
+            <div class="link">
+              <h3>UI组件</h3>
+              <a href="https://more-ka.github.io/vue-ui-wheel/"><span class="highlight">预览链接</span></a> /
+              <a href="https://github.com/more-ka/vue-ui-wheel"><span class="highlight">源码链接</span></a>
+            </div>
+            <p>关键词： <span class="highlight">Vue.js/ VuePress/ ES6/ Parcel/ Npm/ Mocha/ SCSS/ TravisCI</span></p>
+            <p>项目介绍：该项目是参照 Framework7、Ant Design、Element UI 等 UI库思路，
+              做的一个基于Vue.js的简易 <span class="highlight">UI组件库</span>，
+              目前已支持 按钮 布局 输入框 Popover tabs标签 Toast 手风琴 等组件。
+              每个组件均经历从 <span class="highlight">需求分析</span> 到 <span class="highlight">Mocha 单元测试</span>，
+              并用 <span class="highlight">TravisCI 实现持续集成</span>，
+              最终以VuePress 为基础制作 <span class="highlight">官方文档</span>，
+              发布于 npmjs.org。 完成该项目使我对 Vue 的常用特征更加熟悉，
+              同时提升了自己对 <span class="highlight">前端工程化流程以及单元测试重要性</span> 的理解</p>
           </div>
-          <p>关键词： <span class="highlight">Vue.js/ VuePress/ ES6/ Parcel/ Npm/ Mocha/ SCSS/ TravisCI</span></p>
-          <p>项目介绍：该项目是参照 Framework7、Ant Design、Element UI 等 UI库思路，
-            做的一个基于Vue.js的简易 <span class="highlight">UI组件库</span>，
-            目前已支持 按钮 布局 输入框 Popover tabs标签 Toast 手风琴 等组件。
-            每个组件均经历从 <span class="highlight">需求分析</span> 到 <span class="highlight">Mocha 单元测试</span>，
-            并用 <span class="highlight">TravisCI 实现持续集成</span>，
-            最终以VuePress 为基础制作 <span class="highlight">官方文档</span>，
-            发布于 npmjs.org。 完成该项目使我对 Vue 的常用特征更加熟悉，
-            同时提升了自己对 <span class="highlight">前端工程化流程以及单元测试重要性</span> 的理解</p>
         </span>
-        <span class="youzan scrollReveal">
-          <div class="link">
-            <h3>有赞商城</h3>
-            <a href="https://more-ka.github.io/youzan/dist/index.html"><span class="highlight">预览链接</span></a> /
-            <a href="https://github.com/more-ka/youzan"><span class="highlight">源码链接</span></a>
+        <span class="youzan scrollReveal clearfix">
+          <img class="youzan-img" src="./img/youzan.png">
+          <div class="detail">
+            <div class="link">
+              <h3>有赞商城</h3>
+              <a href="https://more-ka.github.io/youzan/dist/index.html"><span class="highlight">预览链接</span></a> /
+              <a href="https://github.com/more-ka/youzan"><span class="highlight">源码链接</span></a>
+            </div>
+            <p>关键词： <span class="highlight">webpack2 vue vue-cli vuex vue-router mock ajax</span></p>
+            <p>描述：使用 <span class="highlight">Vue.js</span> 重构移动端有赞商城， 配置多页面入口， 使用 <span
+                class="highlight">vue-router</span>
+              完成组件的跳转， 使用 <span class="highlight">easy-mock</span> 生成模拟数据， 使用 <span class="highlight">vuex</span> 管理数据，
+              使用
+              <span class="highlight">ajax</span> 发送请求获取数据。 还实现了主页 <span class="highlight">轮播图</span>， <span
+                class="highlight">商品触底无线加载</span>， <span class="highlight">购物车商品管理</span>， 以及 <span
+                class="highlight">地址的三级联动选择</span> 和增删改功能</p>
           </div>
-          <p>关键词： <span class="highlight">webpack2 vue vue-cli vuex vue-router mock ajax</span></p>
-          <p>描述：使用 <span class="highlight">Vue.js</span> 重构移动端有赞商城， 配置多页面入口， 使用 <span
-              class="highlight">vue-router</span>
-            完成组件的跳转， 使用 <span class="highlight">easy-mock</span> 生成模拟数据， 使用 <span class="highlight">vuex</span> 管理数据， 使用
-            <span class="highlight">ajax</span> 发送请求获取数据。 还实现了主页 <span class="highlight">轮播图</span>， <span
-              class="highlight">商品触底无线加载</span>， <span class="highlight">购物车商品管理</span>， 以及 <span
-              class="highlight">地址的三级联动选择</span> 和增删改功能</p>
         </span>
-        <span class="fm scrollReveal">
-          <div class="link">
-            <h3>FM播放器</h3>
-            <a href="https://more-ka.github.io/myFM/index.html"><span class="highlight">预览链接</span></a> /
-            <a href="https://github.com/more-ka/myFM"><span class="highlight">源码链接</span></a>
+        <span class="fm scrollReveal clearfix">
+          <img class="fm-img" src="./img/fm.png">
+          <div class="detail">
+            <div class="link">
+              <h3>FM播放器</h3>
+              <a href="https://more-ka.github.io/myFM/index.html"><span class="highlight">预览链接</span></a> /
+              <a href="https://github.com/more-ka/myFM"><span class="highlight">源码链接</span></a>
+            </div>
+            <p>关键词: <span class="highlight">html5 原生js jQuery eventBus ajax 跨域 MVC</span> </p>
+            <p>描述: 调用百度音乐接口使用<span class="highlight">原生js</span> 和 <span class="highlight">jQuery</span> 实现FM功能， js文件使用
+              <span class="highlight">MVC思想封装</span>，
+              网站支持 <span class="highlight">响应式</span> (不支持手机端)， 歌曲进度条点击， 歌词变色功能</p>
           </div>
-          <p>关键词: <span class="highlight">html5 原生js jQuery eventBus ajax 跨域 MVC</span> </p>
-          <p>描述: 调用百度音乐接口使用<span class="highlight">原生js</span> 和 <span class="highlight">jQuery</span> 实现FM功能， js文件使用
-            <span class="highlight">MVC思想封装</span>，
-            网站支持 <span class="highlight">响应式</span> (不支持手机端)， 歌曲进度条点击， 歌词变色功能</p>
         </span>
-        <span class="cnode scrollReveal">
-          <div class="link">
-            <h3>cnode社区</h3>
-            <a href="https://more-ka.github.io/cnode/dist/index.html"><span class="highlight">预览链接</span></a> /
-            <a href="https://github.com/more-ka/cnode"><span class="highlight">源码链接</span></a>
+        <span class="cnode scrollReveal clearfix">
+          <img class="cnode-img" src="./img/cnode.png">
+          <div class="detail">
+            <div class="link">
+              <h3>cnode社区</h3>
+              <a href="https://more-ka.github.io/cnode/dist/index.html"><span class="highlight">预览链接</span></a> /
+              <a href="https://github.com/more-ka/cnode"><span class="highlight">源码链接</span></a>
+            </div>
+            <p>关键词: <span class="highlight">Vue CLI/ Vue2/ Vue Router/ Axios/ ES6/ Npm/ SCSS</span> </p>
+            <p>描述: 该项目使用 Vue 还原 CNode 官方社区， 项目调用 CNode 官方社区提供的 API， 以 <span class="highlight">Vue-CLI</span> 创建项目模版， 使用
+              <span class="highlight">Axios</span> 获取数据， 使用 <span class="highlight">Vue-Router</span> 进行前端路由的切换及传参， 使用
+              <span class="highlight">watch</span> 监听路由的变化， <span class="highlight">Webpack 打包</span> </p>
           </div>
-          <p>关键词: <span class="highlight">Vue CLI/ Vue2/ Vue Router/ Axios/ ES6/ Npm/ SCSS</span> </p>
-          <p>描述: 该项目使用 Vue 还原 CNode 官方社区， 项目调用 CNode 官方社区提供的 API， 以 <span class="highlight">Vue-CLI</span> 创建项目模版， 使用
-            <span class="highlight">Axios</span> 获取数据， 使用 <span class="highlight">Vue-Router</span> 进行前端路由的切换及传参， 使用
-            <span class="highlight">watch</span> 监听路由的变化， <span class="highlight">Webpack 打包</span> </p>
         </span>
-        <span class="animation scrollReveal">
-          <div class="link">
-            <h3>滑稽</h3>
-            <a href="https://more-ka.github.io/animation-comical/index.html"><span class="highlight">预览链接</span></a> /
-            <a href="https://github.com/more-ka/animation-comical"><span class="highlight">源码链接</span></a>
+        <span class="animation scrollReveal clearfix">
+          <img class="animation-img" src="./img/3.png">
+          <div class="detail">
+            <div class="link">
+              <h3>滑稽</h3>
+              <a href="https://more-ka.github.io/animation-comical/index.html"><span class="highlight">预览链接</span></a> /
+              <a href="https://github.com/more-ka/animation-comical"><span class="highlight">源码链接</span></a>
+            </div>
+            <p>描述: 这是一个使用纯原生 JS 开发的， 动态显示 CSS 画一个滑稽表情过程的小作品。
+              该作品主要思路是通过 <span class="highlight">间隔计时器遍历预先设置在 preview 标签内的代码</span>，
+              将其一个个显示在页面上， 并在 style 标签上作同样处理，
+              以使代码 CSS 生效。此外， 实现了 <span class="highlight">CSS 高亮效果</span> 及调速功能。</p>
           </div>
-          <p>描述: 这是一个使用纯原生 JS 开发的， 动态显示 CSS 画一个滑稽表情过程的小作品。
-            该作品主要思路是通过 <span class="highlight">间隔计时器遍历预先设置在 preview 标签内的代码</span>，
-            将其一个个显示在页面上， 并在 style 标签上作同样处理，
-            以使代码 CSS 生效。此外， 实现了 <span class="highlight">CSS 高亮效果</span> 及调速功能。</p>
         </span>
       </div>
     </div>
@@ -172,13 +365,22 @@
     <h4>留言板</h4>
     <ol id="messageList">
     </ol>
-    <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
-      <label for=""><span class="highlight">昵称</span></label>
-      <input type="text" name="name" class="input">
-      <label for=""><span class="highlight">内容</span></label>
-      <input type="text" name="content" class="input">
+    <form id="postMessageForm">
+      <div class="name">
+        <label for=""><span class="highlight">昵称</span></label>
+        <input type="text" name="name" class="input">
+      </div>
+      <div class="content">
+        <label for=""><span class="highlight">内容</span></label>
+        <input type="text" name="content" class="input">
+      </div>
+
       <input type="submit" value="提交" class="submit">
     </form>
+  </section>
+  <section class="edu scrollReveal" data-x id="edu">
+    <h4>教育经历</h4>
+    <p style="color:#a89e8a;">高中学历, 成人专科在读</p>
   </section>
   <footer class="copyright">
     <p>Open source: <a href="https://github.com/more-ka/resume">GitHub</a> </p>
@@ -199,7 +401,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
-  <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+  <script src="//at.alicdn.com/t/font_1121514_xc6hxsstpj.js"></script>
   <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
   <script src="./js/auto-slide-up.js"></script>
   <script src="./js/sticker-topber.js"></script>

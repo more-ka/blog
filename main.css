@@ -1,5 +1,6 @@
 body {
-  background: #1E1E1E;
+  /* background: #1E1E1E; */
+  background: #0e141f;
   margin: 0;
 }
 
@@ -35,8 +36,8 @@ hr {
 }
 
 .icon {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.2em;
+  height: 1.2em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -78,7 +79,7 @@ hr {
 }
 
 .topNavBar.sticky {
-  background:#191919;
+  background: #191919;
   z-index: 1;
   color: #3D4451;
   box-shadow: 0 10px 50px -5px #000;
@@ -248,7 +249,7 @@ hr {
   top: 100%;
 }
 
-.userCard .picture img{
+.userCard .picture img {
   float: right;
   margin-right: 78px;
   margin-top: 116px;
@@ -266,13 +267,19 @@ hr {
   color: #fff;
   position: relative;
 }
-.userCard .text .icon {
+
+.userCard .text .github {
   position: absolute;
   left: 20%;
-  top: 125px;
+  top: 128px;
+}
+.userCard .text .blog {
+  position: absolute;
+  left: 24%;
+  top: 128px;
 }
 .userCard .text p {
-  text-align: right; 
+  text-align: left;
   color: #a89e8a;
 }
 
@@ -338,7 +345,8 @@ body main .downloadResume:hover {
 
 section.skills,
 section.portfolio,
-section.message {
+section.message,
+section.edu {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -347,7 +355,8 @@ section.message {
 
 section.skills>h4,
 section.message>h4,
-section.portfolio>h4 {
+section.portfolio>h4,
+section.edu>h4 {
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -378,60 +387,73 @@ section.portfolio>h2 {
 }
 
 
-.works{
+.works {
   display: flex;
 }
-.works .imgs{
-  width: 400px;
+
+.works .content>span {
+  display: block;
 }
-.works .imgs img{
+
+.works img {
+  display: block;
+  float: left;
   margin-bottom: 20px;
-  width: 300px;
-  height: 150px;
+  width: 30%;
+  background-size: cover;
   /* box-shadow: 1px 1px 3px #bdbdbd; */
 }
-.works .content{
-  width: 840px;
-  padding: 0 0 0 24px;
+
+.works .detail {
+  float: right;
+  width: 66%;
+}
+
+.works .content {
   color: #a89e8a;
 }
-.works .content .link h3{
+
+.works .content .link h3 {
   display: inline-block;
   width: 24vh;
 }
-.works .content .link a{
+
+.works .content .link a {
   text-decoration: none;
 }
-.works .content .link a:hover{
+
+.works .content .link a:hover {
   text-decoration: underline;
 }
-.works .content .ui{
-  margin-top: -6px;
+
+.works .content .ui {
   display: inline-block;
 }
-.works .content .youzan{
+
+.works .content .youzan {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 12px;
 }
-.works .content .fm{
+
+.works .content .fm {
   display: inline-block;
-  margin-top: 44px;
+  margin-top: 12px;
 }
-.works .content .cnode{
+
+.works .content .cnode {
   display: inline-block;
-  margin-top: 88px;
+  margin-top: 12px;
 }
-.works .content .animation{
+
+.works .content .animation {
   display: inline-block;
-  margin-top: 64px;
+  margin-top: 12px;
 }
+
 section.message {
   width: 700px;
 }
 
-section.message>ol {
-  
-}
 
 section.message>ol>li {
   padding: 16px;
@@ -448,8 +470,14 @@ section.message>ol>li>span:first-child {
 section.message>ol>li>span {
   color: #a89e8a;
 }
-form{
+
+form {
   text-align: center;
+  width: 700px;
+  margin: 50px auto;
+}
+form div{
+  display: inline-block;
 }
 .input {
   border: none;
@@ -480,12 +508,17 @@ form{
   color: #ffcb36;
   font-weight: bold;
 }
-footer.copyright{
+
+footer.copyright {
   text-align: center;
   color: #a89e8a;
-  margin: 100px 0 40px;
+  margin: 80px 0 20px;
   font-size: 12px;
 }
-footer.copyright a{
+
+footer.copyright a {
   color: #ffcb36;
+}
+section.edu{
+  text-align: center;
 }
